@@ -1,0 +1,20 @@
+name: Check First Line in Txt Files
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-text-files:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check first line of all .txt files for cats
+        run: |
+          pwsh -file ./github/scripts/text-ci.ps1
