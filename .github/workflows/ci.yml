@@ -17,4 +17,4 @@ jobs:
 
       - name: Check first line of all .txt files for cats
         run: |
-          pwsh -file ./github/scripts/text-ci.ps1
+          pwsh -file ./.github/scripts/text-ci.ps1
